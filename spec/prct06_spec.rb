@@ -52,6 +52,10 @@ RSpec.describe Nutrition do
 			expect(@nutrition.grasas).to eq(30)
 		end
 
+		it "Valor correcto: Total hidratos" do
+			expect(@nutrition.hidratos).to eq(30)
+		end
+
 	end
 
 
