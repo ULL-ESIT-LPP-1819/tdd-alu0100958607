@@ -6,4 +6,8 @@ class Nutrition
 		@saturadas, @monoinsaturadas, @polinsaturadas, @azucares, @polialcoholes, @almidon, @fibra, @proteinas, @sal, @etiqueta = saturadas, monoinsaturadas, polinsaturadas, azucares, polialcoholes, almidon, fibra, proteinas, sal, etiqueta
 	end
 
+	def grasas
+		@grasas = @saturadas + @monoinsaturadas + @polinsaturadas
+	end
+
 end
