@@ -61,7 +61,7 @@ RSpec.describe Nutrition do
 		end
 
 		it "Valor correcto: Valor energetico kcal" do
-			expect(@nutrition.venergetical).to eq(494)
+			expect(@nutrition.venergeticokcal).to eq(494)
 		end
 
 	end

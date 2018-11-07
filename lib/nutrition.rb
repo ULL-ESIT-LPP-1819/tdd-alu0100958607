@@ -18,4 +18,8 @@ class Nutrition
 		@venergeticokj = @saturadas * 37 + @monoinsaturadas * 37 + @polinsaturadas * 37 + @azucares * 17 + @polialcoholes *10 + @almidon * 17 + @fibra * 8 + @proteinas * 17 + @sal * 25
 	end
 
+	def venergeticokcal
+		@venergeticokcal = @saturadas * 9 + @monoinsaturadas * 9 + @polinsaturadas * 9 + @azucares * 4 + @polialcoholes * 2.4 + @almidon * 4 + @fibra * 2 + @proteinas * 4 + @sal * 6
+	end
+
 end
