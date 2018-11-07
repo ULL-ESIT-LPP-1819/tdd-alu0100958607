@@ -14,4 +14,8 @@ class Nutrition
 		@hidratos = @azucares + @polialcoholes + @almidon
 	end
 
+	def venergeticokj
+		@venergeticokj = @saturadas * 37 + @monoinsaturadas * 37 + @polinsaturadas * 37 + @azucares * 17 + @polialcoholes *10 + @almidon * 17 + @fibra * 8 + @proteinas * 17 + @sal * 25
+	end
+
 end
