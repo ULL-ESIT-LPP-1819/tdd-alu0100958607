@@ -10,4 +10,8 @@ class Nutrition
 		@grasas = @saturadas + @monoinsaturadas + @polinsaturadas
 	end
 
+	def hidratos
+		@hidratos = @azucares + @polialcoholes + @almidon
+	end
+
 end
