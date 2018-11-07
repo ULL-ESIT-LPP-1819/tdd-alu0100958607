@@ -3,7 +3,7 @@ require 'nutrition.rb'
 RSpec.describe Nutrition do
 	
 	before :each do
-		@nutrition = Nutrition.new(10,10,10,10,10,10,10,10,10)
+		@nutrition = Nutrition.new(10,10,10,10,10,10,10,10,10,"Oreo")
 	end
 
 	describe "Etiqueta nutricional" do
@@ -42,6 +42,10 @@ RSpec.describe Nutrition do
 
 		it "Almacenado correctamente: Sal" do
 			expect(@nutrition.sal).to eq(10)
+		end
+
+		it "Almacenado correctamente: Nombre de etiqueta" do
+			expect(@nutrition.etiqueta) == "Oreo"
 		end
 
 	end
