@@ -48,6 +48,10 @@ RSpec.describe Nutrition do
 			expect(@nutrition.etiqueta) == "Oreo"
 		end
 
+		it "Valor correcto: Grasas totales" do
+			expect(@nutrition.grasas).to eq(30)
+		end
+
 	end
 
 
