@@ -56,6 +56,10 @@ RSpec.describe Nutrition do
 			expect(@nutrition.hidratos).to eq(30)
 		end
 
+		it "Valor correcto: Valor energetico KJ" do
+			expect(@nutrition.venergeticokj).to eq(2050)
+		end
+
 	end
 
 
