@@ -38,4 +38,8 @@ class Nutrition
 		return @azucares
 	end
 
+	def get_proteinas
+		return @proteinas
+	end
+
 end
