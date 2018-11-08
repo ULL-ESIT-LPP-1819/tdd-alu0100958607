@@ -85,4 +85,11 @@ class Nutrition
 		return @irazucares.round(1)
 	end
 
+	def irproteinas
+		@irproteinas = (@proteinas/50.to_f) * 100
+		@irproteinas.round(1)
+
+		return @irproteinas.round(1)
+	end
+
 end
