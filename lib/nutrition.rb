@@ -48,7 +48,8 @@ class Nutrition
 		@venergeticokj = venergeticokj
 		@irvenergetico = (@venergeticokj/8400.to_f) * 100
 		@irvenergetico.round(1)
-		return @venergetico
+
+		return @irvenergetico.round(1)
 	end
 
 end
