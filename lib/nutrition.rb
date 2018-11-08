@@ -8,6 +8,7 @@ class Nutrition
 
 	def grasas
 		@grasas = @saturadas + @monoinsaturadas + @polinsaturadas
+		return @grasas
 	end
 
 	def hidratos
@@ -50,6 +51,14 @@ class Nutrition
 		@irvenergetico.round(1)
 
 		return @irvenergetico.round(1)
+	end
+
+	def irgrasas
+		@grasas = grasas
+		@irgrasas = (@grasas/70.to_f) * 100
+		@irgrasas.round(1)
+
+		return @irgrasas.round(1)
 	end
 
 end
