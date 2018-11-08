@@ -93,7 +93,7 @@ RSpec.describe Nutrition do
 		end
 
 		it "IR correcto: Grasas saturadas" do
-			expect(@nutricion.irsaturadas).to eq(50)
+			expect(@nutrition.irsaturadas).to eq(50)
 		end
 
 	end

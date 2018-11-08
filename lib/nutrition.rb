@@ -61,4 +61,11 @@ class Nutrition
 		return @irgrasas.round(1)
 	end
 
+	def irsaturadas
+		@irsaturadas = (@saturadas/20.to_f) * 100
+		@irsaturadas.round(1)
+
+		return @irsaturadas.round(1)
+	end
+
 end
