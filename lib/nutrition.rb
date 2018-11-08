@@ -16,6 +16,8 @@ class Nutrition
 
 	def venergeticokj
 		@venergeticokj = @saturadas * 37 + @monoinsaturadas * 37 + @polinsaturadas * 37 + @azucares * 17 + @polialcoholes *10 + @almidon * 17 + @fibra * 8 + @proteinas * 17 + @sal * 25
+		
+		return @venergeticokj
 	end
 
 	def venergeticokcal
@@ -40,6 +42,13 @@ class Nutrition
 
 	def get_proteinas
 		return @proteinas
+	end
+
+	def irvenergetico
+		@venergeticokj = venergeticokj
+		@irvenergetico = (@venergeticokj/8400.to_f) * 100
+		@irvenergetico.round(1)
+		return @venergetico
 	end
 
 end

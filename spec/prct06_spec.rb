@@ -90,5 +90,4 @@ RSpec.describe Nutrition do
 
 	end
 
-
 end
