@@ -84,6 +84,10 @@ RSpec.describe Nutrition do
 			expect(@test5 = @nutrition.get_proteinas).to eq(10)
 		end
 
+		it "IR correcto: Valor energetico" do
+			expect(@nutrition.irvenergetico).to eq(24.4)
+		end
+
 	end
 
 
