@@ -78,4 +78,11 @@ class Nutrition
 		return @irhidratos.round(1)
 	end
 
+	def irazucares
+		@irazucares = (@azucares/90.to_f) * 100
+		@irazucares.round(1)
+
+		return @irazucares.round(1)
+	end
+
 end
