@@ -65,7 +65,7 @@ RSpec.describe Nutrition do
 		end
 
 		it "Return correcto: Nombre" do
-			expect(@test1 = @nutrition.get_nombre).to eq("Oreo")
+			expect(@test1 = @nutrition.get_nombre) == "Oreo"
 		end
 
 	end

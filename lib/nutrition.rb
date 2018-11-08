@@ -22,4 +22,8 @@ class Nutrition
 		@venergeticokcal = @saturadas * 9 + @monoinsaturadas * 9 + @polinsaturadas * 9 + @azucares * 4 + @polialcoholes * 2.4 + @almidon * 4 + @fibra * 2 + @proteinas * 4 + @sal * 6
 	end
 
+	def get_nombre
+		return @nombre
+	end
+
 end
