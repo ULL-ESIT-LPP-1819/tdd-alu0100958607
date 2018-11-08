@@ -100,6 +100,10 @@ RSpec.describe Nutrition do
 			expect(@nutrition.irhidratos).to eq(11.5)
 		end
 
+		it "IR correcto: Azucares" do
+			expect(@nutrition.irazucares).to eq(11.1)
+		end
+
 	end
 
 end
