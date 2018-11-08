@@ -13,6 +13,8 @@ class Nutrition
 
 	def hidratos
 		@hidratos = @azucares + @polialcoholes + @almidon
+
+		return @hidratos
 	end
 
 	def venergeticokj
@@ -66,6 +68,14 @@ class Nutrition
 		@irsaturadas.round(1)
 
 		return @irsaturadas.round(1)
+	end
+
+	def irhidratos
+		@hidratos = hidratos
+		@irhidratos = (@hidratos/260.to_f) * 100
+		@irhidratos.round(1)
+
+		return @irhidratos.round(1)
 	end
 
 end
