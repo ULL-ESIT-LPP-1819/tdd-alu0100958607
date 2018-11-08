@@ -30,4 +30,8 @@ class Nutrition
 		return @sal
 	end
 
+	def get_saturadas
+		return @saturadas
+	end
+
 end
