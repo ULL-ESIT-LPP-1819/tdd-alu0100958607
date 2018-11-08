@@ -96,6 +96,10 @@ RSpec.describe Nutrition do
 			expect(@nutrition.irsaturadas).to eq(50)
 		end
 
+		it "IR correcto: Hidratos de carbono" do
+			expect(@nutrition.irhidratos).to eq(11.5)
+		end
+
 	end
 
 end
