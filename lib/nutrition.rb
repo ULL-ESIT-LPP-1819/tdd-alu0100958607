@@ -34,4 +34,8 @@ class Nutrition
 		return @saturadas
 	end
 
+	def get_azucares
+		return @azucares
+	end
+
 end
