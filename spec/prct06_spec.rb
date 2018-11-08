@@ -72,6 +72,10 @@ RSpec.describe Nutrition do
 			expect(@test2 = @nutrition.get_sal).to eq(10)
 		end
 
+		it "Return corrcto: Grasas saturadas" do
+			expect(@test3 = @nutrition.get_saturadas).to eq(10)
+		end
+
 	end
 
 
