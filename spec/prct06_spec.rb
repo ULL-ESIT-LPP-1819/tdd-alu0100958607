@@ -88,6 +88,10 @@ RSpec.describe Nutrition do
 			expect(@nutrition.irvenergetico).to eq(24.4)
 		end
 
+		it "IR correcto: Grasas totales" do
+			expect(@nutrition.irgrasas).to eq(42.9)
+		end
+
 	end
 
 end
