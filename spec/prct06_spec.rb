@@ -68,7 +68,7 @@ RSpec.describe Nutrition do
 			expect(@test1 = @nutrition.get_nombre) == "Oreo"
 		end
 
-		it "Return correcto: Grasas saturadas" do
+		it "Return correcto: Sal" do
 			expect(@test2 = @nutrition.get_sal).to eq(10)
 		end
 

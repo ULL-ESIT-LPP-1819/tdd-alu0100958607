@@ -26,4 +26,8 @@ class Nutrition
 		return @nombre
 	end
 
+	def get_sal
+		return @sal
+	end
+
 end
