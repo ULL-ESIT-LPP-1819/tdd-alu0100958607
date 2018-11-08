@@ -104,8 +104,12 @@ RSpec.describe Nutrition do
 			expect(@nutrition.irazucares).to eq(11.1)
 		end
 
-		it "IR corrcto: Proteinas" do
+		it "IR correcto: Proteinas" do
 			expect(@nutrition.irproteinas).to eq(20)
+		end
+
+		it "IR correcto: Sal" do
+			expect(@nutrition.irsal).to eq(166.7)
 		end
 
 	end
