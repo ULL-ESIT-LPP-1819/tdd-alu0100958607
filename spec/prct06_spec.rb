@@ -64,6 +64,10 @@ RSpec.describe Nutrition do
 			expect(@nutrition.venergeticokcal).to eq(494)
 		end
 
+		it "Return correcto: Nombre" do
+			expect(@test1 = @nutrition.get_nombre).to eq("Oreo")
+		end
+
 	end
 
 
