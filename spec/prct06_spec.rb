@@ -80,6 +80,10 @@ RSpec.describe Nutrition do
 			expect(@test4 = @nutrition.get_azucares).to eq(10)
 		end
 
+		it "Return correcto: Proteinas" do
+			expect(@test5 = @nutrition.get_proteinas).to eq(10)
+		end
+
 	end
 
 
