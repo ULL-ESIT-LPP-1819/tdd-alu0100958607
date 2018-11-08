@@ -92,4 +92,11 @@ class Nutrition
 		return @irproteinas.round(1)
 	end
 
+	def irsal
+		@irsal = (@sal/6.to_f) * 100
+		@irsal.round(1)
+
+		return @irsal.round(1)
+	end
+
 end
