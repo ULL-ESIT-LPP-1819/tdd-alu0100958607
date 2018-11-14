@@ -29,5 +29,10 @@ RSpec.describe List do
 		it "Comprobando método empty" do
 			expect(@list.empty).to be(true)
 		end
+
+		it "Inserción por la cabeza" do
+			@list insert_head(@node1)
+			expect(@list.head.value).to eq(1)
+		end
 	end
 end
