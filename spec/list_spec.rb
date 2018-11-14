@@ -10,8 +10,8 @@ RSpec.describe List do
 
 	describe "Tests de la pila" do
 		it "Inserción en la pila" do
-			@lista.insert(@node1)
-			expect(@lista.tail.value).to eq(1)
+			@list.insert(@node1)
+			expect(@list.tail.value).to eq(1)
 		end
 	end
 end
