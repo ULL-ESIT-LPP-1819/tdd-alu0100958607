@@ -46,4 +46,15 @@ class List
 			@head=node
 		end
 	end
+
+	def extract_tail
+		if(@tail==NIL)
+			puts "Lista vacia"
+		else
+			aux=tail
+			@tail=@tail.prev
+			aux.prev=NIL
+			return aux
+		end
+	end
 end
