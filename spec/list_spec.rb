@@ -18,5 +18,10 @@ RSpec.describe List do
                         @list.insert(@node2)
                         expect(@list.tail.value).to eq(2)
                 end
+
+		it "Extracción de la pila" do
+			aux=@list.extract
+			expect(a.value).to eq(1)
+		end
 	end
 end
