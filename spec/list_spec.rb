@@ -5,6 +5,6 @@ RSpec.describe List do
 	before :each do
 		@node1 = Node.new(1,NIL,NIL)
 		@node2 = Node.new(2,NIL,NIL)
-		@list = List.new()
+		@list = List.new(NIL,NIL)
 	end
 end
