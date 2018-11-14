@@ -31,7 +31,7 @@ RSpec.describe List do
 		end
 
 		it "Inserción por la cabeza" do
-			@list insert_head(@node1)
+			@list.insert_head(@node1)
 			expect(@list.head.value).to eq(1)
 		end
 	end

@@ -35,4 +35,15 @@ class List
 			return true
 		end
 	end
+
+	def insert_head(node)
+		if(@head==NIL)
+			@tail=node
+			@head=node
+		else
+			node.nexst=@head
+			@head.prev=node
+			@head=node
+		end
+	end
 end
