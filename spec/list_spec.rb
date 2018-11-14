@@ -40,5 +40,9 @@ RSpec.describe List do
 			aux=@list.extract_tail
                         expect(aux.value).to eq(1)
 		end
+
+		it "Comprobación del to_s" do
+			expect(@list.to_s).to eq("[1,]")
+		end
 	end
 end

@@ -33,6 +33,8 @@ class List
 	def empty
 		if(@tail==NIL)
 			return true
+		else
+			return false
 		end
 	end
 
