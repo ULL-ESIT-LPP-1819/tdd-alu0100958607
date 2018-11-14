@@ -25,5 +25,9 @@ RSpec.describe List do
 			aux=@list.extract
 			expect(aux.value).to eq(1)
 		end
+
+		it "Comprobando método empty" do
+			expect(@list.empty).to be(true)
+		end
 	end
 end
