@@ -34,5 +34,11 @@ RSpec.describe List do
 			@list.insert_head(@node1)
 			expect(@list.head.value).to eq(1)
 		end
+
+		it "Extracción por la cola" do
+			@list.insert_head(@node1)
+			aux=@list.extract_tail
+                        expect(aux.value).to eq(1)
+		end
 	end
 end
