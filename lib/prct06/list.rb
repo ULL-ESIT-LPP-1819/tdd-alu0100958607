@@ -18,4 +18,15 @@ class List
 			@tail=node
 		end
 	end
+
+	def extract
+		if(@head==NIL)
+			puts "Lista vacia"
+		else
+			aux=@head
+			@head=@head.nexst
+			aux.nexst=NIL
+			return aux
+		end
+	end
 end
