@@ -29,4 +29,10 @@ class List
 			return aux
 		end
 	end
+
+	def empty
+		if(@tail==NIL)
+			return true
+		end
+	end
 end
