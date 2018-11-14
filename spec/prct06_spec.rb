@@ -1,4 +1,4 @@
-require 'nutrition.rb'
+require 'prct06/nutrition.rb'
 
 RSpec.describe Nutrition do
 	
