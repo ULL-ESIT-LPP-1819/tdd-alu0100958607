@@ -1,6 +1,10 @@
 Node = Struct.new(:value, :nexst, :prev)
 
 class List
-	@head = nil
-	@tail = nil
+	attr_reader :head, :tail
+
+	def initialize(head, tail)
+		@head=head
+		@tail=tail
+	end
 end
