@@ -25,7 +25,13 @@ class List
 		else
 			aux=@head
 			@head=@head.nexst
+			if(@head!=NIL)
+				@head.prev=NIL
+			end
 			aux.nexst=NIL
+			if(@head==NIL)
+				@tail=NIL
+			end
 			return aux
 		end
 	end
@@ -55,8 +61,31 @@ class List
 		else
 			aux=tail
 			@tail=@tail.prev
+			if(@tail!=NIL)
+				@tail.nexst=NIL
+			end
 			aux.prev=NIL
+
+			if(@tail==NIL)
+				@head=NIL
+			end
 			return aux
 		end
 	end
+
+	def to_s
+		aux=@head
+		string="["
+		
+		if(@head!=NIL)
+			while aux.nexst!=NIL do
+				string+aux.value+","
+				if(aux.nexst!=NIL)
+					aux=aux.nexst
+				end
+			end
+			string+"]"
+		end
+	end
+
 end

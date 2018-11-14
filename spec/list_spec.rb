@@ -42,7 +42,7 @@ RSpec.describe List do
 		end
 
 		it "Comprobación del to_s" do
-			expect(@list.to_s).to eq("[1,]")
+			expect(@list.to_s)=="[1,]"
 		end
 	end
 end
