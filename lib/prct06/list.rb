@@ -78,14 +78,18 @@ class List
 		string="["
 		
 		if(@head!=NIL)
-			while aux.nexst!=NIL do
-				string+aux.value+","
+			while aux!=NIL do
+				string+=aux.value.to_s+","
 				if(aux.nexst!=NIL)
 					aux=aux.nexst
+				else
+					aux=NIL
 				end
 			end
-			string+"]"
+			string+="]"
 		end
+
+		return string
 	end
 
 end
