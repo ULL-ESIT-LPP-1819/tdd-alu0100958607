@@ -30,6 +30,10 @@ RSpec.describe Prct06 do
 			expect(@nutrition.instance_of? Nutrition).to eq(true)
 		end
 
+		it "Comprobando que @nutrition es un objeto de la clase Nutrition" do
+			expect(@nutrition.is_a? Nutrition).to eq(true)
+		end
+
         end
 end
 
