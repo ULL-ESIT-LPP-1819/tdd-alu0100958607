@@ -38,6 +38,10 @@ RSpec.describe Prct06 do
 			expect(@antro.class).to eq(Antro)
 		end
 
+		it "Comprobando que @antro es una instancia de la clase Antro" do 
+			expect(@antro.instance_of? Antro).to eq(true)
+		end
+
         end
 end
 
