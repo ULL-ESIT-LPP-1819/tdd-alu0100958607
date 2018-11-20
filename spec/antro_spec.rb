@@ -34,6 +34,10 @@ RSpec.describe Prct06 do
 			expect(@nutrition.is_a? Nutrition).to eq(true)
 		end
 
+		it "Comprobando que @antro pertenece a la clase Antro " do
+			expect(@antro.class).to eq(Antro)
+		end
+
         end
 end
 
