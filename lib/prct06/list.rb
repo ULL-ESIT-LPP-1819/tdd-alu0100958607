@@ -8,8 +8,9 @@ class List
 		@tail=tail
 	end
 
-	def insert(node)
-		if(@tail==NIL)
+	def insert(value)
+		node = Node.new(value, nil, nil)
+		if(@tail==nil)
 			@tail=node
 			@head=node
 		else
@@ -20,32 +21,34 @@ class List
 	end
 
 	def extract
-		if(@head==NIL)
+		if(@head==nil)
 			puts "Lista vacia"
 		else
 			aux=@head
 			@head=@head.nexst
-			if(@head!=NIL)
-				@head.prev=NIL
+			if(@head!=nil)
+				@head.prev=nil
 			end
-			aux.nexst=NIL
-			if(@head==NIL)
-				@tail=NIL
+			aux.nexst=nil
+			if(@head==nil)
+				@tail=nil
 			end
 			return aux
 		end
 	end
 
 	def empty
-		if(@tail==NIL)
+		if(@tail==nil)
 			return true
 		else
 			return false
 		end
 	end
 
-	def insert_head(node)
-		if(@head==NIL)
+	def insert_head(value)
+		node = Node.new(value, nil, nil)
+
+		if(@head==nil)
 			@tail=node
 			@head=node
 		else
@@ -56,18 +59,18 @@ class List
 	end
 
 	def extract_tail
-		if(@tail==NIL)
+		if(@tail==nil)
 			puts "Lista vacia"
 		else
 			aux=tail
 			@tail=@tail.prev
-			if(@tail!=NIL)
-				@tail.nexst=NIL
+			if(@tail!=nil)
+				@tail.nexst=nil
 			end
-			aux.prev=NIL
+			aux.prev=nil
 
-			if(@tail==NIL)
-				@head=NIL
+			if(@tail==nil)
+				@head=nil
 			end
 			return aux
 		end
@@ -77,13 +80,13 @@ class List
 		aux=@head
 		string="["
 		
-		if(@head!=NIL)
-			while aux!=NIL do
+		if(@head!=nil)
+			while aux!=nil do
 				string+=aux.value.to_s+","
-				if(aux.nexst!=NIL)
+				if(aux.nexst!=nil)
 					aux=aux.nexst
 				else
-					aux=NIL
+					aux=nil
 				end
 			end
 			string+="]"
