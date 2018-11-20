@@ -6,6 +6,7 @@ RSpec.describe Prct06 do
 	before :each do
                 @list = List.new(nil,nil)
 		@nutrition = Nutrition.new(1,1,1,1,1,1,1,1,1,"Oreo")
+		@antro = Antro.new(80,185)
         end
 
         describe "Tests de herencia y clase antropometrica" do
