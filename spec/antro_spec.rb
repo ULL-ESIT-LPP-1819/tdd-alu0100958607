@@ -7,6 +7,7 @@ RSpec.describe Prct06 do
                 @list = List.new(nil,nil)
 		@nutrition = Nutrition.new(1,1,1,1,1,1,1,1,1,"Oreo")
 		@antro = Antro.new(80,185)
+		@guy = Guy.new("Jose", "111111A")
         end
 
         describe "Tests de herencia y clase antropometrica" do
@@ -40,6 +41,10 @@ RSpec.describe Prct06 do
 
 		it "Comprobando que @antro es una instancia de la clase Antro" do 
 			expect(@antro.instance_of? Antro).to eq(true)
+		end
+
+		it "Comprobando que @antro es un objeto de clase Antro" do
+			expect(@antro.is_a? Antro).to eq(true)
 		end
 
         end
