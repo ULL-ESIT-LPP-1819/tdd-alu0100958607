@@ -9,6 +9,12 @@ RSpec.describe Prct06 do
 		@nutrition = Nutrition.new(1,1,1,1,1,1,1,1,1,"Oreo")
 		@antro = Antro.new(80,185)
 		@guy = Guy.new("Jose", "111111A")
+		@antro1 = Antro.new(80,1.85)
+		@antro2 = Antro.new(50,1.60)
+		@antro3 = Antro.new(117,1.90)
+		@antro4 = Antro.new(75,1.85)
+		@antro5 = Antro.new(80,1.70)
+
         end
 
         describe "Tests de herencia y clase antropometrica" do
@@ -47,6 +53,35 @@ RSpec.describe Prct06 do
 		it "Comprobando que @antro es un objeto de clase Antro" do
 			expect(@antro.is_a? Antro).to eq(true)
 		end
+
+		it "Comprobando que la clase antropometrico hereda de la clase Guy" do
+			expect(@antro.is_a? Guy).to eq(true)
+		end
+
+		it "Comprobación de la pila con valores antopometricos" do
+			@list.insert(@antro1)
+			@list.insert(@antro2)
+			@list.insert(@antro3)
+			@list.insert(@antro4)
+			@list.insert(@antro5)
+
+			aux = @list.extract
+			expect(aux.value.IMC).to be<(25)
+
+			aux = @list.extract
+                        expect(aux.value.IMC).to be<(25)
+			
+			aux = @list.extract
+                        expect(aux.value.IMC).to be>(25)
+
+			aux = @list.extract
+                        expect(aux.value.IMC).to be<(25)
+
+			aux = @list.extract
+                        expect(aux.value.IMC).to be>(25)
+
+		end
+
 
         end
 end

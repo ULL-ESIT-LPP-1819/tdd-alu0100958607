@@ -7,4 +7,8 @@ class Antro < Guy
 		@peso,@altura = peso, altura
 	end
 
+	def IMC
+		@imc = (@peso)/(@altura*@altura)
+	end
+
 end
