@@ -127,6 +127,16 @@ RSpec.describe Prct06 do
 
                 end
 
+		it "Comprobando el comparador between" do
+                        @nutrition1 = Nutrition.new(10,10,10,10,10,10,10,10,10,"Oreo")
+                        @nutrition2 = Nutrition.new(20,10,40,10,70,90,10,30,10,"Lays")
+			@nutrition3 = Nutrition.new(11,11,11,11,11,11,11,11,11,"Dinosaurus")
+
+			expect(@nutrition3.between?(@nutrition1, @nutrition2)).to eq(true)
+
+                end
+
+
 	end
 
 	describe "Pruebas de comparación de datos antropometricos" do
@@ -134,12 +144,14 @@ RSpec.describe Prct06 do
 		it "Comprobación de comparadores" do
 			@antro1 = Antro.new(80, 1.80, 3, 4, 5, 6)
 			@antro2 = Antro.new(117, 1.90, 3, 4, 5, 6)
+			@antro3 = Antro.new(85, 1.8, 3,4,5,6)
 
 			expect(@antro1 > @antro2).to eq(false)
 			expect(@antro1 < @antro2).to eq(true)
 			expect(@antro1 == @antro2).to eq(false)
 			expect(@antro1 >= @antro2).to eq(false)
 			expect(@antro1 <= @antro2).to eq(true)
+			expect(@antro3.between?(@antro1, @antro2)).to eq(true)
 
 		end
 	end	
