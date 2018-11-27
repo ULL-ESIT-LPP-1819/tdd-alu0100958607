@@ -14,6 +14,11 @@ RSpec.describe Prct06 do
 		@antro3 = Antro.new(117,1.90,2,3,4,5)
 		@antro4 = Antro.new(75,1.85,2,3,4,5)
 		@antro5 = Antro.new(80,1.70,2,3,4,5)
+		@nutri1 = Nutrition.new(1,1,1,1,1,1,1,1,1,"Oreo")
+		@nutri2 = Nutrition.new(2,2,2,2,2,2,2,2,2,"Oreo")
+		@nutri3 = Nutrition.new(3,3,3,3,3,3,3,3,3,"Oreo")
+		@nutri4 = Nutrition.new(4,4,4,4,4,4,4,4,4,"Oreo")
+		@nutri5 = Nutrition.new(5,5,5,5,5,5,5,5,5,"Oreo")
 
         end
 
@@ -153,6 +158,18 @@ RSpec.describe Prct06 do
 			expect(@antro1 <= @antro2).to eq(true)
 			expect(@antro3.between?(@antro1, @antro2)).to eq(true)
 
+		end
+	end
+
+	describe "Pruebas de operadores enumerables de la lista de etiquetas" do
+		it "comprobacion" do
+			@list.insert(@nutri1)
+                	@list.insert(@nutri2)
+                	@list.insert(@nutri3)
+                	@list.insert(@nutri4)
+               		@list.insert(@nutri5)
+
+			expect(@list.min).to eq(@nutri1)
 		end
 	end	
 

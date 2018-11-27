@@ -1,6 +1,8 @@
 Node = Struct.new(:value, :nexst, :prev)
 
 class List
+
+	include Enumerable
 	attr_reader :head, :tail
 
 	def initialize(head, tail)
@@ -94,5 +96,4 @@ class List
 
 		return string
 	end
-
 end
