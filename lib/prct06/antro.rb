@@ -2,6 +2,7 @@ require 'prct06/guy.rb'
 
 class Antro < Guy
 	
+	include Comparable	
 	attr_reader :peso, :altura, :edad, :sexo, :cintura, :cadera
 
         def initialize(peso, altura, edad, sexo, cintura, cadera)
@@ -9,7 +10,7 @@ class Antro < Guy
         end
 
 
-	def IMC
+	def imc
 		@imc = (@peso)/(@altura*@altura)
 	end
 
@@ -22,5 +23,7 @@ class Antro < Guy
                 @rcc = @cintura.to_f / @cadera.to_f
         end
 
-
+	def <=> (other)
+		imc <=> other.imc
+	end
 end

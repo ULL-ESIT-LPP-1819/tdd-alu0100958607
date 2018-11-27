@@ -66,19 +66,19 @@ RSpec.describe Prct06 do
 			@list.insert(@antro5)
 
 			aux = @list.extract
-			expect(aux.value.IMC).to be<(25)
+			expect(aux.value.imc).to be<(25)
 
 			aux = @list.extract
-                        expect(aux.value.IMC).to be<(25)
+                        expect(aux.value.imc).to be<(25)
 			
 			aux = @list.extract
-                        expect(aux.value.IMC).to be>(25)
+                        expect(aux.value.imc).to be>(25)
 
 			aux = @list.extract
-                        expect(aux.value.IMC).to be<(25)
+                        expect(aux.value.imc).to be<(25)
 
 			aux = @list.extract
-                        expect(aux.value.IMC).to be>(25)
+                        expect(aux.value.imc).to be>(25)
 
 		end
 
@@ -135,11 +135,11 @@ RSpec.describe Prct06 do
 			@antro1 = Antro.new(80, 1.80, 3, 4, 5, 6)
 			@antro2 = Antro.new(117, 1.90, 3, 4, 5, 6)
 
-			expect(@antro1 < @antro2)to be(false)
-			expect(@antro1 > @antro2)to be(true)
-			expect(@antro1 == @antro2)to be(false)
-			expect(@antro1 <= @antro2)to be(false)
-			expect(@antro1 >= @antro2)to be(true)
+			expect(@antro1 > @antro2).to be(false)
+			expect(@antro1 < @antro2).to be(true)
+			expect(@antro1 == @antro2).to be(false)
+			expect(@antro1 >= @antro2).to be(false)
+			expect(@antro1 <= @antro2).to be(true)
 
 		end
 	end	
