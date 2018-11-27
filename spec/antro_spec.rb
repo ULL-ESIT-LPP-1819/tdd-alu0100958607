@@ -114,6 +114,16 @@ RSpec.describe Prct06 do
 
                 end
 
+		it "Comprobando el comparador <=" do
+                        @nutrition1 = Nutrition.new(10,10,10,10,10,10,10,10,10,"Oreo")
+                        @nutrition2 = Nutrition.new(20,10,40,10,70,90,10,30,10,"Lays")
+
+
+                        expect(@nutrition1 <= @nutrition2).to eq(true)
+
+                end
+
+
 
 	end
 
