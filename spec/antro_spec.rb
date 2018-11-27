@@ -7,13 +7,13 @@ RSpec.describe Prct06 do
 	before :each do
                 @list = List.new(nil,nil)
 		@nutrition = Nutrition.new(1,1,1,1,1,1,1,1,1,"Oreo")
-		@antro = Antro.new(80,185)
+		@antro = Antro.new(80,1.85,3,4,5,6)
 		@guy = Guy.new("Jose", "111111A")
-		@antro1 = Antro.new(80,1.85)
-		@antro2 = Antro.new(50,1.60)
-		@antro3 = Antro.new(117,1.90)
-		@antro4 = Antro.new(75,1.85)
-		@antro5 = Antro.new(80,1.70)
+		@antro1 = Antro.new(80,1.85,2,3,4,5)
+		@antro2 = Antro.new(50,1.60,2,3,4,5)
+		@antro3 = Antro.new(117,1.90,2,3,4,5)
+		@antro4 = Antro.new(75,1.85,2,3,4,5)
+		@antro5 = Antro.new(80,1.70,2,3,4,5)
 
         end
 
