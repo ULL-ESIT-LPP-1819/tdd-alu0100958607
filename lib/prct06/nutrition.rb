@@ -1,5 +1,6 @@
 class Nutrition
-	
+
+	include Comparable
 	attr_reader :saturadas, :monoinsaturadas, :polinsaturadas, :azucares, :polialcoholes, :almidon, :fibra, :proteinas, :sal, :etiqueta
 
 	def initialize(saturadas, monoinsaturadas, polinsaturadas, azucares, polialcoholes, almidon, fibra, proteinas, sal, etiqueta)
@@ -97,6 +98,10 @@ class Nutrition
 		@irsal.round(1)
 
 		return @irsal.round(1)
+	end
+
+	def <=> (other)
+		venergeticokj <=> other.venergeticokj
 	end
 
 end

@@ -86,11 +86,15 @@ RSpec.describe Prct06 do
         end
 	
 	describe "Pruebas de comparación de etiqueta" do
-		@nutrition1 = Nutrition.new(10,10,10,10,10,10,10,10,10,"Oreo")
-		@nutrition1 = Nutrition.new(20,10,40,10,70,90,10,30,10,"Lays")
+		
+		it "Comprobando el comparador >" do
+		       	@nutrition1 = Nutrition.new(10,10,10,10,10,10,10,10,10,"Oreo")
+                	@nutrition2 = Nutrition.new(20,10,40,10,70,90,10,30,10,"Lays")
 
 
-		expect(@nutrition1 < @nutrition2).to eq(true)
+                	expect(@nutrition1 < @nutrition2).to eq(true)
+
+		end	
 	end
 
 end
