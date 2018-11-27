@@ -91,7 +91,6 @@ RSpec.describe Prct06 do
 		       	@nutrition1 = Nutrition.new(10,10,10,10,10,10,10,10,10,"Oreo")
                 	@nutrition2 = Nutrition.new(20,10,40,10,70,90,10,30,10,"Lays")
 
-
                 	expect(@nutrition1 < @nutrition2).to eq(true)
 
 		end
@@ -99,7 +98,6 @@ RSpec.describe Prct06 do
 		it "Comprobando el comparador >" do
                         @nutrition1 = Nutrition.new(10,10,10,10,10,10,10,10,10,"Oreo")
                         @nutrition2 = Nutrition.new(20,10,40,10,70,90,10,30,10,"Lays")
-
 
                         expect(@nutrition1 > @nutrition2).to eq(false)
 
@@ -109,7 +107,6 @@ RSpec.describe Prct06 do
                         @nutrition1 = Nutrition.new(10,10,10,10,10,10,10,10,10,"Oreo")
                         @nutrition2 = Nutrition.new(20,10,40,10,70,90,10,30,10,"Lays")
 
-
                         expect(@nutrition1 == @nutrition2).to eq(false)
 
                 end
@@ -118,12 +115,17 @@ RSpec.describe Prct06 do
                         @nutrition1 = Nutrition.new(10,10,10,10,10,10,10,10,10,"Oreo")
                         @nutrition2 = Nutrition.new(20,10,40,10,70,90,10,30,10,"Lays")
 
-
                         expect(@nutrition1 <= @nutrition2).to eq(true)
 
                 end
 
+		it "Comprobando el comparador >=" do
+                        @nutrition1 = Nutrition.new(10,10,10,10,10,10,10,10,10,"Oreo")
+                        @nutrition2 = Nutrition.new(20,10,40,10,70,90,10,30,10,"Lays")
 
+                        expect(@nutrition1 >= @nutrition2).to eq(false)
+
+                end
 
 	end
 
