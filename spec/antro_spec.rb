@@ -135,11 +135,11 @@ RSpec.describe Prct06 do
 			@antro1 = Antro.new(80, 1.80, 3, 4, 5, 6)
 			@antro2 = Antro.new(117, 1.90, 3, 4, 5, 6)
 
-			expect(@antro1 > @antro2).to be(false)
-			expect(@antro1 < @antro2).to be(true)
-			expect(@antro1 == @antro2).to be(false)
-			expect(@antro1 >= @antro2).to be(false)
-			expect(@antro1 <= @antro2).to be(true)
+			expect(@antro1 > @antro2).to eq(false)
+			expect(@antro1 < @antro2).to eq(true)
+			expect(@antro1 == @antro2).to eq(false)
+			expect(@antro1 >= @antro2).to eq(false)
+			expect(@antro1 <= @antro2).to eq(true)
 
 		end
 	end	
