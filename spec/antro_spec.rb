@@ -162,7 +162,7 @@ RSpec.describe Prct06 do
 	end
 
 	describe "Pruebas de operadores enumerables de la lista de etiquetas" do
-		it "comprobacion" do
+		it "Comprobacion de enumerables" do
 			@list.insert(@nutri1)
                 	@list.insert(@nutri2)
                 	@list.insert(@nutri3)
@@ -170,6 +170,7 @@ RSpec.describe Prct06 do
                		@list.insert(@nutri5)
 
 			expect(@list.min).to eq(@nutri1)
+			expect(@list.max).to eq(@nutri5)
 		end
 	end	
 

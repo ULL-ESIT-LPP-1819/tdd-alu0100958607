@@ -96,4 +96,12 @@ class List
 
 		return string
 	end
+
+	def each(&block)
+		aux = @head
+		while aux!=nil do
+			yield aux.value
+			aux = aux.nexst
+		end
+	end
 end
