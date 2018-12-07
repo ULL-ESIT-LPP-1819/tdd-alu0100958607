@@ -15,10 +15,10 @@ RSpec.describe Prct06 do
 		@antro4 = Antro.new(75,1.85,2,3,4,5)
 		@antro5 = Antro.new(80,1.70,2,3,4,5)
 		@nutri1 = Nutrition.new(1,1,1,1,1,1,1,1,1,"Oreo")
-		@nutri2 = Nutrition.new(2,2,2,2,2,2,2,2,2,"Oreo")
-		@nutri3 = Nutrition.new(3,3,3,3,3,3,3,3,3,"Oreo")
-		@nutri4 = Nutrition.new(4,4,4,4,4,4,4,4,4,"Oreo")
-		@nutri5 = Nutrition.new(5,5,5,5,5,5,5,5,5,"Oreo")
+		@nutri2 = Nutrition.new(2,2,2,2,2,2,2,2,2,"Oreo min")
+		@nutri3 = Nutrition.new(3,3,3,3,3,3,3,3,3,"Lays")
+		@nutri4 = Nutrition.new(4,4,4,4,4,4,4,4,4,"Chips a hoy")
+		@nutri5 = Nutrition.new(5,5,5,5,5,5,5,5,5,"Ruffles")
 
         end
 
@@ -171,8 +171,25 @@ RSpec.describe Prct06 do
 
 			expect(@list.min).to eq(@nutri1)
 			expect(@list.max).to eq(@nutri5)
+			expect(@list.sort).to eq([@nutri1,@nutri2,@nutri3,@nutri4,@nutri5])
+			expect(@list.collect{|i| @nutri4}).to eq([@nutri4,@nutri4,@nutri4,@nutri4,@nutri4])
+			expect(@list.select{|i| i.etiqueta =="Oreo"}).to eq([@nutri1])
 		end
-	end	
+	end
 
+	describe "Pruebas de operadores enumerables de la lista de antro" do
+		it "Comprobacion de enumerables de antro" do
+			@list.insert(@antro1)
+			@list.insert(@antro2)
+			@list.insert(@antro3)
+			@list.insert(@antro4)
+
+			expect(@list.min).to eq(@antro2)
+			expect(@list.max).to eq(@antro3)
+			expect(@list.sort).to eq([@antro2,@antro4,@antro1,@antro3])
+			expect(@list.collect{|i| @antro1}).to eq([@antro1,@antro1,@antro1,@antro1])
+			expect(@list.select{|i| i.peso == 80}).to eq([@antro1])
+		end
+	end
 end
 

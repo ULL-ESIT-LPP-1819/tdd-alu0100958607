@@ -3,13 +3,16 @@ Node = Struct.new(:value, :nexst, :prev)
 class List
 
 	include Enumerable
+	#Atributos de clase List
 	attr_reader :head, :tail
-
+	
+	#Función initialize de la clase List
 	def initialize(head, tail)
 		@head=head
 		@tail=tail
 	end
-
+	
+	#Método de inserción
 	def insert(value)
 		node = Node.new(value, nil, nil)
 		if(@tail==nil)
@@ -21,7 +24,8 @@ class List
 			@tail=node
 		end
 	end
-
+	
+	#Método de extracción
 	def extract
 		if(@head==nil)
 			puts "Lista vacia"
@@ -38,7 +42,8 @@ class List
 			return aux
 		end
 	end
-
+	
+	#Función que retorna si la lista es vacia o no
 	def empty
 		if(@tail==nil)
 			return true
@@ -46,7 +51,8 @@ class List
 			return false
 		end
 	end
-
+	
+	#Metodo de inserción por la cabeza
 	def insert_head(value)
 		node = Node.new(value, nil, nil)
 
@@ -59,7 +65,8 @@ class List
 			@head=node
 		end
 	end
-
+	
+	#Método de extracción por la cola
 	def extract_tail
 		if(@tail==nil)
 			puts "Lista vacia"
@@ -77,7 +84,8 @@ class List
 			return aux
 		end
 	end
-
+	
+	#Método to_s que combierte la clase a string
 	def to_s
 		aux=@head
 		string="["
@@ -96,7 +104,8 @@ class List
 
 		return string
 	end
-
+	
+	#Funciones enumerables de la clase
 	def each(&block)
 		aux = @head
 		while aux!=nil do
