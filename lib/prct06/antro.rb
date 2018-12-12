@@ -37,7 +37,21 @@ class Antro < Guy
 
 		@efecto_termogeno = @g_energetico_basal * 0.1
 
-		@gasto_actividad = @g_energetico_basal * @factor_actividad
+		if (@actividad == "reposo")
+			@factor_Actividad = 0.0
+		elsif (@actividad == "ligera")
+			@factor_Actividad = 0.12
+		elsif (@actividad == "moderada")
+			@factor_Actividad = 0.27
+		else
+			@factor_Actividad = 0.54
+		end
+
+		@gasto_actividad = @g_energetico_basal.to_f * @factor_actividad.to_f
+
+		@g_energetico = @g_energetico_basal + @efecto_termogeno + @gasto_actividad
+
+		return @g_energetico
 
 	end
 	
