@@ -4,11 +4,11 @@ class Antro < Guy
 	
 	include Comparable
 	#Definicion de atributos de la clase	
-	attr_reader :peso, :altura, :edad, :sexo, :cintura, :cadera
+	attr_reader :peso, :altura, :edad, :sexo, :cintura, :cadera, :actividad
 	
 	#Definicion del metodo initialize de la clase antropometrico
-        def initialize(peso, altura, edad, sexo, cintura, cadera)
-                @peso ,@altura ,@edad ,@sexo, @cintura, @cadera = peso, altura, edad, sexo, cintura, cadera
+        def initialize(peso, altura, edad, sexo, cintura, cadera, actividad)
+		@peso ,@altura ,@edad ,@sexo, @cintura, @cadera, @actividad = peso, altura, edad, sexo, cintura, cadera, actividad
         end
 
 	#Función que calcula el imc de una persona
@@ -26,6 +26,20 @@ class Antro < Guy
         def rcc
                 @rcc = @cintura.to_f / @cadera.to_f
         end
+
+	#Funcion para calcular el gasto energetico total
+	def g_energetico
+		if(@sexo == 1)
+			@g_energetico_basal = (10 * @peso) + (6.25 * @altura) - (5 * @edad) + 5
+		else
+			@g_energetico_basal = (10 * @peso) + (6.25 * @altura) - (5 * @edad) - 161
+		end
+
+		@efecto_termogeno = @g_energetico_basal * 0.1
+
+		@gasto_actividad = @g_energetico_basal * @factor_actividad
+
+	end
 	
 	#Función de sobrecarga de los operadores comparables
 	def <=> (other)
