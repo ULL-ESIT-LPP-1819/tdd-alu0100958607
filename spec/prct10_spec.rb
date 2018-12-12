@@ -1,12 +1,16 @@
+require 'prct06/nutrition'
+require 'prct06/list.rb'
+require 'prct06/antro.rb'
+require 'prct06/guy.rb'
 
-RSpec.describe prct10 do
+RSpec.describe Prct06 do
 	before :each do
 		
-		@a1 = Antro.new(90,190,3,4,5,6,7)
-		@a2 = Antro.new(80,195,3,4,5,6,7)
-		@a3 = Antro.new(70,170,3,4,5,6,7)
-		@a4 = Antro.new(65,150,3,4,5,6,7)
-		@a5 = Antro.new(100,180,3,4,5,6,7)
+		@a1 = Antro.new(90,190,30,1,5,6)
+		@a2 = Antro.new(80,195,20,1,5,6)
+		@a3 = Antro.new(70,170,25,0,5,6)
+		@a4 = Antro.new(65,150,19,0,5,6)
+		@a5 = Antro.new(100,180,55,0,5,6)
 
 		@e1 = Nutrition.new(10,10,10,10,10,10,10,10,10,"Ensaladilla rusa")
 	        @e2 = Nutrition.new(10,10,10,10,10,10,10,10,10,"Sandwich mixto")
@@ -19,6 +23,10 @@ RSpec.describe prct10 do
 	end
 
 	describe "Pruebas menu" do
+		
+		it "Prueba del gasto energetico:" do
+			expect(@a1.g_energetico).to eq(2136.75)
+		end
 
 	end	
 end
