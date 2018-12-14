@@ -1,6 +1,6 @@
 require 'prct06/nutrition'
 require 'prct06/list.rb'
-
+=begin
 RSpec.describe List do
 	before :each do
 		@list = List.new(nil,nil)
@@ -79,3 +79,4 @@ RSpec.describe List do
 		end
 	end
 end
+=end

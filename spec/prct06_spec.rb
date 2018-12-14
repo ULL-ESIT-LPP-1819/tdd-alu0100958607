@@ -1,5 +1,5 @@
 require 'prct06/nutrition.rb'
-
+=begin
 RSpec.describe Nutrition do
 	
 	before :each do
@@ -115,3 +115,5 @@ RSpec.describe Nutrition do
 	end
 
 end
+
+=end
