@@ -43,6 +43,7 @@ RSpec.describe Prct06 do
 			
 			expect(@array.sort).to eq([@e2,@e5,@e1,@e4,@e3])
 			expect(@array.sort_for).to eq([@e2,@e5,@e1,@e4,@e3])
+			expect(@array.sort_each).to eq([@e2,@e5,@e1,@e4,@e3])
 
 			expect(@list.sort).to eq([@a4,@a3,@a5,@a2,@a1])
 
