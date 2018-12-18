@@ -4,7 +4,6 @@ class Guy
 	
 	#Función initialize de la clase Guy
 	def initialize(nombre, dni)
-		@nombre=nombre
-		@dni=dni
+		@nombre, @dni=nombre, dni
 	end
 end
