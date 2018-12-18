@@ -2,6 +2,7 @@ require 'prct06/nutrition'
 require 'prct06/list.rb'
 require 'prct06/antro.rb'
 require 'prct06/guy.rb'
+require 'prct06/array.rb'
 
 RSpec.describe Prct06 do
 	before :each do
@@ -41,8 +42,8 @@ RSpec.describe Prct06 do
 		it "Comprobar ordenados" do
 			
 			expect(@array.sort).to eq([@e2,@e5,@e1,@e4,@e3])
+			expect(@array.sort_for).to eq([@e2,@e5,@e1,@e4,@e3])
 
-			
 			expect(@list.sort).to eq([@a4,@a3,@a5,@a2,@a1])
 
 		end		
