@@ -24,9 +24,6 @@ class Array
 		@aux.each do |x|
 			@pos = @pos + 1
 			@aux[@pos..@aux.length-1] do |y|
-
-				puts y.etiqueta
-
 				if (x>y)
 					x, y = y, x
 				end
