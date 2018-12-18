@@ -3,6 +3,7 @@ require 'prct06/list.rb'
 require 'prct06/antro.rb'
 require 'prct06/guy.rb'
 require 'prct06/array.rb'
+require 'benchmark'
 
 RSpec.describe Prct06 do
 	before :each do
@@ -48,8 +49,24 @@ RSpec.describe Prct06 do
 			expect(@list.sort).to eq([@a4,@a3,@a5,@a2,@a1])
 			expect(@list.sort_for).to eq([@a4,@a3,@a5,@a2,@a1])
 			expect(@list.sort_each).to eq([@a4,@a3,@a5,@a2,@a1])
+			
+		end
 
-		end		
+		it "Comprobar benchmark" do
+			
+			n = 1500
+
+			Benchmark.bm do |x|
+				x.report("for:") {  n.times{@array.sort_for} }
+                		x.report("each:") {  n.times{@array.sort_each} }
+                		x.report("sort:") {  n.times{@array.sort} }
+
+				x.report("for:") {  n.times{@list.sort_for} }
+                                x.report("each:") {  n.times{@list.sort_each} }
+                                x.report("sort:") {  n.times{@list.sort} }
+            		end
+
+		end	
 
 	end
 end
