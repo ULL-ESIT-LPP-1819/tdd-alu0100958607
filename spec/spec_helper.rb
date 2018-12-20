@@ -1,6 +1,7 @@
 require "bundler/setup"
 require "prct06/nutrition"
 require "coveralls"
+require 'benchmark'
 
 Coveralls.wear!
 
