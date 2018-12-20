@@ -19,6 +19,13 @@ RSpec.describe Prct06 do
 		@e3 = Nutrition.new(3,4,2,1,2,3,2,1,1,"Potaje de lentejas")
 		@e4 = Nutrition.new(3,3,1,3,3,1,3,0,3,"Bistec de cerdo")
 		@e5 = Nutrition.new(1,1,1,1,1,1,1,1,1,"Ensalada de atun")
+	end
+	
+
+	describe "Pruebas practica 11" do
+		
+		it "Comprobar ordenados" do
+			
 
 		@array = []
 		@list = List.new(nil,nil)
@@ -35,13 +42,6 @@ RSpec.describe Prct06 do
 		@list.insert(@a4)
 		@list.insert(@a5)
 
-	end
-	
-
-	describe "Pruebas practica 11" do
-		
-		it "Comprobar ordenados" do
-			
 			expect(@array.sort).to eq([@e2,@e5,@e1,@e4,@e3])
 			expect(@array.sort_for).to eq([@e2,@e5,@e1,@e4,@e3])
 			expect(@array.sort_each).to eq([@e2,@e5,@e1,@e4,@e3])
@@ -54,6 +54,22 @@ RSpec.describe Prct06 do
 
 		it "Comprobar benchmark" do
 			
+
+		@array = []
+		@list = List.new(nil,nil)
+		
+		@array << @e1
+		@array << @e2
+		@array << @e3
+		@array << @e4
+		@array << @e5
+
+		@list.insert(@a1)
+		@list.insert(@a2)
+		@list.insert(@a3)
+		@list.insert(@a4)
+		@list.insert(@a5)
+
 			n = 1500
 
 			Benchmark.bm do |x|
